@@ -1,13 +1,64 @@
+/* Local fonts */
+@font-face {
+    font-display: swap;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
+    
+}
+
+@font-face {
+    font-display: swap;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
+    
+}
+
+@font-face {
+    font-display: swap;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2');
+    
+}
+
+@font-face {
+    font-display: swap;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
+    
+}
+
+
+
+
+
+/* Variables */
 :root {
     --color-brand-light: #819B57;
     --color-brand-dark: #465929;
     --color-primary-dark: #31261A;
     --color-primary-light: #FAF4EA;
+    --font-brand: 'Poppins', sans-serif;
 }
 
 /* Base */
 body {
     color: var(--color-primary-dark);
+    font-family: var(--font-brand);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 ul {
@@ -17,6 +68,8 @@ ul {
 /* Button */
 .button-order {
     color:var(--color-primary-light);
+
+    font-weight: 600;
  
     background-color: var(--color-brand-light);
     border: 2px solid var(--color-brand-light);
@@ -35,17 +88,23 @@ ul {
 .link {
     color: var(--color-primary-light);
 
+    text-decoration: none;
+
     transition: all 0.3s ease 0s;
 }
 
 .link:hover {
     color: var(--color-brand-light);
+    font-weight: 600;
 }
 
 
 /* Hero section */
 .hero-title {
     color: var(--color-primary-light);
+    text-align: center;
+    font-weight: 900;
+    font-size: 128px;
 }
 
 .hero-title .accent {
@@ -60,8 +119,41 @@ ul {
 
 .section-title {
     color: var(--color-primary-dark);
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.3;
 }
 
 .section-title .accent {
     color: var(--color-brand-dark);
+}
+
+.advantages-item {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Traditions section */
+.traditions-text .brand {
+    color: var(--color-brand-light);
+    font-weight: 600;
+}
+.traditions-text .uppercase {
+    text-transform: uppercase;
+}
+
+/* Chefs section */
+.chef-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* Formats section */
+.format-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.format-text {
+    font-size: 14px;
+    font-weight: 300;
 }
