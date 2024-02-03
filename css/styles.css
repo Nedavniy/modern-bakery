@@ -44,9 +44,11 @@
 /* Variables */
 :root {
     --color-brand-light: #819B57;
-    --color-brand-dark: #465929;
-    --color-primary-dark: #31261A;
     --color-primary-light: #FAF4EA;
+    --color-primary-dark: #31261A;
+    --color-brand-dark: #465929;
+    --color-secondary-shadow: #A18268;
+    --color-secondary-light: #CFCFBC;
     --font-brand: 'Poppins', sans-serif;
 }
 
@@ -74,7 +76,7 @@ body {
 }
 
 .container-outer {
-    padding: 0 24px;
+    padding: 0 1.5rem;
 }
 
 .container-inner {
@@ -93,7 +95,6 @@ body {
 .section-title .accent {
     color: var(--color-brand-dark);
 }
-
 /* Button */
 .button-order {
     padding: 1rem 2rem; 
@@ -105,12 +106,12 @@ body {
     border-radius: 8px;
     
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3 ease;
+    transition: all 0.3s ease 0s;
 }
 
 .button-order:hover {
     background-color: transparent;
-    color: var(--color-brand-da);
+    color: var(--color-brand-dark);
 }
 
 /* Link */
@@ -186,18 +187,19 @@ body {
 }
 
 .traditions-section__title {
-    margin-bottom: 42px;
+    margin-bottom: 2.625rem;
 }
 
 .traditions-section__paragraph {
     margin-bottom: 42px;
+    text-align: start;
 }
 
-.traditions-text__paragraph .brand {
+.traditions-section__paragraph .brand {
     color: var(--color-brand-light);
     font-weight: 600;
 }
-.traditions-text__paragraph .uppercase {
+.traditions-section__paragraph .uppercase {
     text-transform: uppercase;
 }
 
@@ -212,53 +214,145 @@ body {
 }
 
 /* Chefs section */
-.chefs-section__content {
-    display: flex;
-}
 
 .chefs-section__title {
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
     justify-content: center;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 900;
 }
 
-.chef-nastya__title {
-    margin-bottom: 16px;
-    font-size: 40px;
-    font-weight: 600;
+.chefs-section {
+    margin-bottom: 6rem;
 }
 
-.chef-vlad__title {
-    margin-bottom: 16px;
+.chefs-section__span {
+    color: var(--color-brand-dark);
+}
+
+.chefs-section__title::before {
+    content: '';
+    background-color: #CFCFBC;
+    width: 22rem;
+    height: 0.125rem;
+    display: block;
+}
+
+.chefs-section__title::after {
+    content: '';
+    background-color: #CFCFBC;
+    width: 22rem;
+    height: 0.125rem;
+    display: block;
+    position: relative;
+}
+
+.chefs-list {
+    display: flex;
+    align-items: flex-start;
+}
+
+.chefs-list li {
+    display: inherit;
+    align-items: flex-start;
+    margin-left: 1.875rem;
+    flex: 1 1 50%;
+}
+
+.chefs-picture {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -8px 8px 30px gray;
+}
+
+.chefs-article__name {
     font-size: 40px;
     font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.chefs-article {
+    margin-left: 1.875rem;
+}
+
+.chefs-article p {
+    margin-bottom: 1.6875rem;
 }
 
 /* Formats section */
-.formats-title {
-    margin-bottom: 80px;
+.formats-section {
+    margin-bottom: 6rem;
+}
+.formats-section__title {
+    margin-bottom: 5rem;
+    text-align: center;
 }
 
-.format-title {
+.formats-list {
+    display: flex;
+}
+
+.formats-item {
+    display: flex;
+    flex: 1 1 50%;
+    margin-right: 1.25rem;
+}
+
+.formats-article {
+    font-size: 14px;
+    font-weight: 300;    
+    text-align: start;
+}
+
+.formats-article__title {
     font-size: 24px;
     font-weight: 600;
 }
-.format-text {
-    font-size: 14px;
-    font-weight: 300;
-}
 
 /* Contact section */
-.contacts-title {
-    margin-bottom: 16px;
+.contact-section__container {
+    display: flex;
+    flex: 1 1 50%;
 }
 
+.contact-section__heading {
+    flex: inherit;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.contact-section__title {
+    margin-bottom: 1rem;
+
+}
+
+.contact-section__heading p {
+    color: var(--color-brand-dark);
+    margin-bottom: 2.625rem;
+}
+
+.contact-section__form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-section__form input {
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+
 /* Footer */
+
 
 
 /* Header */
 .header {
     position: fixed;
-    top: 32px;
+    top: 2rem;
     left: 0;
     right: 0;
 }
@@ -267,7 +361,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5px 0;
+    padding: 0.0938rem 0;
 }
 .header-nav {
 }
@@ -277,5 +371,5 @@ body {
     
 }
 .header-nav__items > * + * {
-    margin-left: 64px;
+    margin-left: 4rem;
 }
