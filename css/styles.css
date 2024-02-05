@@ -283,30 +283,55 @@ body {
 .formats-section {
     margin-bottom: 6rem;
 }
+
 .formats-section__title {
     margin-bottom: 5rem;
     text-align: center;
 }
 
-.formats-list {
+.formats-article__list {
     display: flex;
-}
-
-.formats-item {
-    display: flex;
+    justify-content: center;
     flex: 1 1 50%;
+}
+
+.formats-list__item {
+    display: flex;
+    flex-direction: column;
     margin-right: 1.25rem;
+    width: 349px;
+    height: 444px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: end;
+    padding: 24px;
 }
 
-.formats-article {
+
+.formats-list__item, p h2{
     font-size: 14px;
-    font-weight: 300;    
-    text-align: start;
+    font-weight: 300;
+    color: var(--color-primary-light);
+
 }
 
-.formats-article__title {
+.formats-list__walrus {
+    background-image: url(../images/walrus-format.jpg);
+}
+
+.formats-list__horseshoe {
+    background-image: url(../images/horseshoe-format.jpg);
+}
+
+.formats-list__handlebar {
+    background-image: url(../images/handlebar-format.jpg);
+
+}
+
+.formats-item__title {
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: 16px;
 }
 
 /* Contact section */
