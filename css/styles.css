@@ -88,7 +88,7 @@ body {
 .section-title {
     color: var(--color-primary-dark);
     font-size: 64px;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 1.3;
 }
 
@@ -214,38 +214,41 @@ body {
 }
 
 /* Chefs section */
-
-.chefs-section__title {
-    margin-bottom: 5rem;
-    justify-content: center;
-    text-align: center;
-    font-size: 64px;
-    font-weight: 900;
-}
-
 .chefs-section {
     margin-bottom: 6rem;
+}
+
+.chefs-section__title {
+    position: relative;
+    text-wrap: nowrap;
+    text-align: center;
+    margin: 0 auto 80px;
+    max-width: 520px;
+    font-size: 64px;
 }
 
 .chefs-section__span {
     color: var(--color-brand-dark);
 }
 
-.chefs-section__title::before {
+.chefs-section__title::before,
+.chefs-section__title::after {
+    position: absolute;
+    display: block;
     content: '';
     background-color: #CFCFBC;
-    width: 22rem;
-    height: 0.125rem;
-    display: block;
+    width: 352px;
+    border: 2px solid var(--color-secondary-light);
+}
+
+.chefs-section__title::before {
+    left: -360px;
+    top: 145px;
 }
 
 .chefs-section__title::after {
-    content: '';
-    background-color: #CFCFBC;
-    width: 22rem;
-    height: 0.125rem;
-    display: block;
-    position: relative;
+    right: -360px;
+    top: 145px;
 }
 
 .chefs-list {
